@@ -1,3 +1,6 @@
+import tkinter as tk
+from tkinter import filedialog
+from tkinter import ttk  # Import ttk for themed widgets
 import torch
 from torchvision import models, transforms
 import cv2
@@ -10,11 +13,11 @@ import subprocess
 import os
 from datetime import datetime
 
-# 加载预训练的Faster R-CNN模型
+# Load pre-trained Faster R-CNN model
 model = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
 model.eval()
 
-# COCO数据集中类别的名称列表
+# COCO dataset category names
 COCO_INSTANCE_CATEGORY_NAMES = [
     '__background__', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
     'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'N/A', 'stop sign',
@@ -30,15 +33,16 @@ COCO_INSTANCE_CATEGORY_NAMES = [
     'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush'
 ]
 
-# 定义图像转换
+# Define image transformations
 transform = transforms.Compose([
     transforms.ToPILImage(),
     transforms.ToTensor()
 ])
 
-# 将模型移动到GPU
+# Move model to GPU if available
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = model.to(device)
+
 
 def process_frame(frame, model, transform, target_label_id, threshold=0.8):
     # 将图像转换为Tensor并移动到GPU
@@ -246,8 +250,167 @@ def detect_people_in_video(video_path, model, transform, target_label_id, interv
 
     return detected_times, active_times, fps
 
-if __name__ == "__main__":
-    video_path = "data/02980.MTS"
-    interval = 10  # 每隔 10 秒取一帧进行分析
-    target_label_id = 1  # 目标类别ID（1代表'person'）
+
+def browse_directory():
+    directory = filedialog.askdirectory()
+    if directory:
+        directory_path.set(directory)
+        update_video_list(directory)
+
+def update_video_list(directory):
+    for widget in video_frame.winfo_children():
+        widget.destroy()
+
+    video_files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f)) and f.lower().endswith(('.mp4', '.mts', '.avi'))]
+    for i, video_file in enumerate(video_files):
+        var = tk.BooleanVar()
+        check = tk.Checkbutton(video_frame, variable=var)
+        check.grid(row=i, column=0, sticky="w")
+        label = tk.Label(video_frame, text=video_file)
+        label.grid(row=i, column=1, sticky="w")
+
+        # Create the result label here
+        result_label = tk.Label(video_frame, text="")
+        result_label.grid(row=i, column=3, sticky="w")
+
+        button = tk.Button(video_frame, text="Analysis", command=lambda path=os.path.join(directory, video_file), rl=result_label: analyze_video(path, rl)) # Pass result_label to analyze_video
+        button.grid(row=i, column=2, sticky="w")
+
+
+        video_checkboxes.append((var, video_file, result_label)) # Store the result label
+
+
+def analyze_video(video_path, result_label):
     detected_times, active_times, video_fps = detect_people_in_video(video_path, model, transform, target_label_id, interval=interval, num_threads=4)
+    if detected_times != -1:
+        cap = cv2.VideoCapture(video_path)
+        fps = cap.get(cv2.CAP_PROP_FPS)
+        total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        video_duration = total_frames / fps
+        detected_percentage = (detected_times / video_duration) * 100 if video_duration > 0 else 0
+        active_percentage = (active_times / video_duration) * 100 if video_duration > 0 else 0
+        result_text = f"Total detected time: {detected_times} seconds ({format_time(detected_times)}), ({detected_percentage:.2f}% of video duration).\nTotal active time: {active_times} seconds ({format_time(active_times)}), ({active_percentage:.2f}% of video duration)."
+        result_label.config(text=result_text)
+
+
+def mass_analysis():
+    directory = directory_path.get()
+    if not directory:
+        mass_result.set("Please select a directory first.")
+        return
+
+    selected_videos = [
+        os.path.join(directory, file)
+        for var, file, result_label in video_checkboxes
+        if var.get() and os.path.isfile(os.path.join(directory, file))
+    ]
+
+    if not selected_videos:
+        mass_result.set("No videos selected.")
+        return
+
+    total_detected_time = 0
+    total_active_time = 0
+    total_video_duration = 0
+    total_videos = len(selected_videos)
+    current_video = 0
+
+    for video_path in selected_videos:
+        current_video += 1
+        progress_label.config(text=f"Analyzing video {current_video}/{total_videos}: {os.path.basename(video_path)}")
+        root.update_idletasks()
+
+        detected_times, active_times, video_fps = detect_people_in_video(video_path, model, transform, target_label_id, interval=interval, num_threads=4)
+        if detected_times == -1:
+            mass_result.set(f"Error analyzing {video_path}.")
+            progress_label.config(text="Error!")  # Indicate error in the progress label
+            root.update_idletasks()
+            return
+
+        cap = cv2.VideoCapture(video_path)
+        fps = cap.get(cv2.CAP_PROP_FPS)
+        total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+        video_duration = total_frames / fps
+        cap.release() # Release the video capture object
+
+        total_detected_time += detected_times
+        total_active_time += active_times
+        total_video_duration += video_duration
+
+
+    detected_percentage = (total_detected_time / total_video_duration) * 100 if total_video_duration > 0 else 0
+    active_percentage = (total_active_time / total_video_duration) * 100 if total_video_duration > 0 else 0
+    result_text = f"Total detected time (all videos): {total_detected_time} seconds ({format_time(total_detected_time)}), ({detected_percentage:.2f}% of total video duration).\nTotal active time (all videos): {total_active_time} seconds ({format_time(total_active_time)}), ({active_percentage:.2f}% of total video duration)."
+    mass_result.set(result_text)
+    progress_label.config(text="Finished!")
+    root.update_idletasks()
+
+
+# GUI setup
+root = tk.Tk()
+root.title("Video Analysis")
+root.geometry("800x500")
+root.resizable(False, False)
+
+# Use ttk styles for a more modern look
+style = ttk.Style(root)
+style.theme_use("clam")  # Or another available theme
+
+# Variables
+directory_path = tk.StringVar()
+video_checkboxes = []
+interval = 10
+target_label_id = 1
+mass_result = tk.StringVar()
+
+# --- Part 1: Directory selection ---
+frame_directory = ttk.Frame(root)
+frame_directory.grid(row=0, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+
+browse_button = ttk.Button(frame_directory, text="选择目录", command=browse_directory)
+browse_button.pack(side="left")
+
+directory_label = ttk.Label(frame_directory, textvariable=directory_path, width=50)
+directory_label.pack(side="left", padx=(10, 0))  # Add padding
+
+
+# --- Part 2: Video list ---
+frame_videos = ttk.Frame(root)
+frame_videos.grid(row=1, column=0, columnspan=2, padx=10, pady=(0, 10), sticky="nsew")
+
+video_frame = tk.Canvas(frame_videos) # Use a Canvas for scrolling
+video_frame.pack(side="left", fill="both", expand=True)
+
+scrollbar = ttk.Scrollbar(frame_videos, orient="vertical", command=video_frame.yview)
+scrollbar.pack(side="right", fill="y")
+
+video_frame.configure(yscrollcommand=scrollbar.set)
+video_frame.bind('<Configure>', lambda e: video_frame.configure(scrollregion=video_frame.bbox("all")))
+
+inner_video_frame = ttk.Frame(video_frame)
+video_frame.create_window((0, 0), window=inner_video_frame, anchor="nw")
+
+
+# --- Part 3: Mass analysis ---
+frame_analysis = ttk.Frame(root)
+frame_analysis.grid(row=2, column=0, columnspan=2, padx=10, pady=(0, 0), sticky="ew") # Remove bottom padding
+
+mass_analysis_button = ttk.Button(frame_analysis, text="批量分析", command=mass_analysis)
+mass_analysis_button.pack(fill='x', pady=(0,5)) # Remove top padding, keep bottom padding
+
+
+# Progress indicator
+progress_label = ttk.Label(frame_analysis, text="Ready")
+progress_label.pack(pady=(0,5)) # Remove top padding, keep small bottom padding
+
+
+mass_result_label = ttk.Label(root, textvariable=mass_result, wraplength=760, justify="left")
+mass_result_label.grid(row=3, column=0, columnspan=2, padx=10, pady=(0, 0), sticky="nw")
+
+root.grid_rowconfigure(1, weight=1)  # Video list area expands
+root.grid_rowconfigure(2, minsize=60)  # Reduced minimum height for the analysis section (adjust as needed)
+root.grid_rowconfigure(3, minsize=60)  # Increased minimum height for the results section
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(1, weight=1)
+
+root.mainloop()
