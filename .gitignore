@@ -1,0 +1,35 @@
+# 忽略虚拟环境
+venv/
+
+# 忽略ffmpeg
+ffmpeg-master-latest-win64-gpl/
+
+# 忽略data
+data/
+
+# 忽略 Python 缓存和编译文件
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.log
+*.pot
+*.mo
+*.so
+
+# 忽略常见视频文件
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.wmv
+*.flv
+*.mpeg
+*.mpg
+*.m4v
+*.3gp
+*.webm
+*.ogv
+*.mts  # 添加 .mts 视频文件忽略规则

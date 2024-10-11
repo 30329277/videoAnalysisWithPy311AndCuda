@@ -1,0 +1,8 @@
+# torch
+# torchvision
+# opencv-python
+# Pillow
+torch==1.8.0
+torchvision==0.9.0
+opencv-python==4.5.1.48
+Pillow==8.1.0

@@ -1,0 +1,81 @@
+COCO（Common Objects in Context）数据集是一个广泛使用的数据集，用于图像识别、分割和 captioning 等任务。它包含了大量的常见物体类别。以下是一些 COCO 数据集中常用的类别及其对应的 ID：
+
+1. 人 (person) - 1
+2. 自行车 (bicycle) - 2
+3. 汽车 (car) - 3
+4. 摩托车 (motorcycle) - 4
+5. 飞机 (airplane) - 5
+6. 公交车 (bus) - 6
+7. 火车 (train) - 7
+8. 卡车 (truck) - 8
+9. 船 (boat) - 9
+10. 交通灯 (traffic light) - 10
+11. 消火栓 (fire hydrant) - 11
+12. 停止标志 (stop sign) - 12
+13. 停车计时器 (parking meter) - 13
+14. 长椅 (bench) - 14
+15. 鸟 (bird) - 15
+16. 猫 (cat) - 16
+17. 狗 (dog) - 17
+18. 马 (horse) - 18
+19. 羊 (sheep) - 19
+20. 牛 (cow) - 20
+21. 大象 (elephant) - 21
+22. 熊 (bear) - 22
+23. 斑马 (zebra) - 23
+24. 长颈鹿 (giraffe) - 24
+25. 背包 (backpack) - 25
+26. 雨伞 (umbrella) - 27
+27. 手提包 (handbag) - 28
+28. 领带 (tie) - 30
+29. 行李箱/手提箱 (suitcase) - 31
+30. 飞盘 (frisbee) - 32
+31. 雪橇 (skis) - 33
+32. 雪板 (snowboard) - 34
+33. 运动球 (sports ball) - 35
+34. 风筝 (kite) - 36
+35. 棒球棒 (baseball bat) - 37
+36. 棒球手套 (baseball glove) - 38
+37. 滑板 (skateboard) - 39
+38. 冲浪板 (surfboard) - 40
+39. 网球拍 (tennis racket) - 41
+40. 瓶子 (bottle) - 42
+41. 酒杯 (wine glass) - 43
+42. 咖啡杯 (cup) - 44
+43. 叉 (fork) - 45
+44. 刀 (knife) - 46
+45. 匙 (spoon) - 47
+46. 碗 (bowl) - 48
+47. 香蕉 (banana) - 49
+48. 苹果 (apple) - 50
+49. 三明治 (sandwich) - 51
+50. 橙子 (orange) - 52
+51. 西瓜 (watermelon) - 53
+52. 热狗 (hot dog) - 54
+53. 比萨饼 (pizza) - 55
+54. 甜甜圈 (donut) - 56
+55. 蛋糕 (cake) - 57
+56. 椅子 (chair) - 58
+57. 沙发 (couch) - 59
+58. 盆栽植物 (potted plant) - 60
+59. 床 (bed) - 61
+60. 餐桌 (dining table) - 62
+61. 厕所 (toilet) - 63
+62. 电视 (tv) - 64
+63. 笔记本电脑 (laptop) - 65
+64. 鼠标 (mouse) - 66
+65. 遥控器 (remote) - 67
+66. 键盘 (keyboard) - 68
+67. 手机 (cell phone) - 69
+68. 微波炉 (microwave) - 70
+69. 烤箱 (oven) - 71
+70. 烤面包机 (toaster) - 72
+71. 水槽 (sink) - 73
+72. 冰箱 (refrigerator) - 74
+73. 书 (book) - 75
+74. 时钟 (clock) - 76
+75. 花瓶 (vase) - 77
+76. 剪刀 (scissors) - 78
+77. 泰迪熊 (teddy bear) - 79
+78. 吹风机 (hair drier) - 80
+79. 牙刷 (toothbrush) - 81
