@@ -1,0 +1,61 @@
+Person detected at 0m 10s, duration: 10 seconds
+Person detected at 0m 20s, duration: 10 seconds
+Active person detected at 0m 20s, duration: 10 seconds
+Person detected at 0m 30s, duration: 10 seconds
+Active person detected at 0m 30s, duration: 10 seconds
+Person detected at 1m 0s, duration: 10 seconds
+Active person detected at 1m 0s, duration: 10 seconds
+Person detected at 0m 50s, duration: 10 seconds
+Active person detected at 0m 50s, duration: 10 seconds
+Person detected at 0m 40s, duration: 10 seconds
+Active person detected at 0m 40s, duration: 10 seconds
+Person detected at 1m 10s, duration: 10 seconds
+Active person detected at 1m 10s, duration: 10 seconds
+Person detected at 1m 40s, duration: 10 seconds
+Active person detected at 1m 40s, duration: 10 seconds
+Person detected at 1m 30s, duration: 10 seconds
+Active person detected at 1m 30s, duration: 10 seconds
+Person detected at 1m 20s, duration: 10 seconds
+Active person detected at 1m 20s, duration: 10 seconds
+Person detected at 1m 50s, duration: 10 seconds
+Active person detected at 1m 50s, duration: 10 seconds
+Person detected at 2m 0s, duration: 10 seconds
+Active person detected at 2m 0s, duration: 10 seconds
+Person detected at 2m 10s, duration: 10 seconds
+Active person detected at 2m 10s, duration: 10 seconds
+Person detected at 2m 20s, duration: 10 seconds
+Person detected at 2m 30s, duration: 10 seconds
+Person detected at 2m 40s, duration: 10 seconds
+Person detected at 2m 50s, duration: 10 seconds
+Active person detected at 2m 50s, duration: 10 seconds
+Person detected at 3m 0s, duration: 10 seconds
+Active person detected at 3m 0s, duration: 10 seconds
+Person detected at 3m 10s, duration: 10 seconds
+Active person detected at 3m 10s, duration: 10 seconds
+Person detected at 3m 20s, duration: 10 seconds
+Person detected at 3m 30s, duration: 10 seconds
+Person detected at 3m 40s, duration: 10 seconds
+Person detected at 3m 50s, duration: 10 seconds
+Person detected at 4m 0s, duration: 10 seconds
+Active person detected at 4m 0s, duration: 10 seconds
+Person detected at 4m 10s, duration: 10 seconds
+Active person detected at 4m 10s, duration: 10 seconds
+Person detected at 4m 20s, duration: 10 seconds
+Person detected at 4m 30s, duration: 10 seconds
+Person detected at 4m 40s, duration: 10 seconds
+Person detected at 4m 50s, duration: 10 seconds
+Active person detected at 4m 50s, duration: 10 seconds
+Person detected at 5m 0s, duration: 10 seconds
+Active person detected at 5m 0s, duration: 10 seconds
+Person detected at 5m 10s, duration: 10 seconds
+Person detected at 5m 20s, duration: 10 seconds
+Active person detected at 5m 20s, duration: 10 seconds
+Person detected at 5m 30s, duration: 10 seconds
+Active person detected at 5m 30s, duration: 10 seconds
+Person detected at 5m 40s, duration: 10 seconds
+Active person detected at 5m 40s, duration: 10 seconds
+Person detected at 5m 50s, duration: 10 seconds
+
+Total detected time: 350 seconds (5m 50s), (97.27% of video duration).
+Total active time: 220 seconds (3m 40s), (61.14% of video duration).
+Person detected from 0m 10s to 0m 0s
