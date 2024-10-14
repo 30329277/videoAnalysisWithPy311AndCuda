@@ -247,7 +247,7 @@ def detect_people_in_video(video_path, model, transform, target_label_id, interv
     return detected_times, active_times, fps
 
 if __name__ == "__main__":
-    video_path = "data/02980.MTS"
+    video_path = "data/Media1.mp4"
     interval = 10  # 每隔 10 秒取一帧进行分析
     target_label_id = 1  # 目标类别ID（1代表'person'）
     detected_times, active_times, video_fps = detect_people_in_video(video_path, model, transform, target_label_id, interval=interval, num_threads=4)
