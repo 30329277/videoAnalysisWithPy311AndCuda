@@ -240,26 +240,29 @@ def browse_directory():
         update_video_list(directory)
 
 def update_video_list(directory):
-    for widget in video_frame.winfo_children():
+    for widget in inner_video_frame.winfo_children():
         widget.destroy()
 
     video_files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f)) and f.lower().endswith(('.mp4', '.mts', '.avi'))]
     for i, video_file in enumerate(video_files):
         var = tk.BooleanVar()
-        check = tk.Checkbutton(video_frame, variable=var)
+        check = tk.Checkbutton(inner_video_frame, variable=var)
         check.grid(row=i, column=0, sticky="w")
-        label = tk.Label(video_frame, text=video_file)
+        label = tk.Label(inner_video_frame, text=video_file)
         label.grid(row=i, column=1, sticky="w")
 
         # Create the result label here
-        result_label = tk.Label(video_frame, text="")
+        result_label = tk.Label(inner_video_frame, text="")
         result_label.grid(row=i, column=3, sticky="w")
 
-        button = tk.Button(video_frame, text="Analysis", command=lambda path=os.path.join(directory, video_file), rl=result_label: analyze_video(path, rl)) # Pass result_label to analyze_video
+        button = tk.Button(inner_video_frame, text="Analysis", command=lambda path=os.path.join(directory, video_file), rl=result_label: analyze_video(path, rl)) # Pass result_label to analyze_video
         button.grid(row=i, column=2, sticky="w")
 
-
         video_checkboxes.append((var, video_file, result_label)) # Store the result label
+
+    # Update the scrollregion after adding new widgets
+    inner_video_frame.update_idletasks()  # Force an update of the geometry information
+    video_frame.config(scrollregion=video_frame.bbox("all"))
 
 
 def analyze_video(video_path, result_label):
@@ -375,8 +378,13 @@ scrollbar.pack(side="right", fill="y")
 video_frame.configure(yscrollcommand=scrollbar.set)
 video_frame.bind('<Configure>', lambda e: video_frame.configure(scrollregion=video_frame.bbox("all")))
 
+# Define inner_video_frame as a global variable
+global inner_video_frame
 inner_video_frame = ttk.Frame(video_frame)
 video_frame.create_window((0, 0), window=inner_video_frame, anchor="nw")
+
+# Bind the function to the configure event of the inner frame
+inner_video_frame.bind("<Configure>", lambda e: video_frame.config(scrollregion=video_frame.bbox("all")))
 
 
 # --- Part 3: Mass analysis ---

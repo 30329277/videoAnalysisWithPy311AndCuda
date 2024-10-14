@@ -1,0 +1,252 @@
+Person detected at 0m 30s, duration: 10 seconds
+Person detected at 0m 20s, duration: 10 seconds
+Active person detected at 0m 20s, duration: 10 seconds
+Person detected at 0m 10s, duration: 10 seconds
+Active person detected at 0m 10s, duration: 10 seconds
+Person detected at 0m 0s, duration: 10 seconds
+Active person detected at 0m 0s, duration: 10 seconds
+Person detected at 0m 40s, duration: 10 seconds
+Active person detected at 0m 40s, duration: 10 seconds
+Person detected at 1m 0s, duration: 10 seconds
+Active person detected at 1m 0s, duration: 10 seconds
+Person detected at 0m 50s, duration: 10 seconds
+Active person detected at 0m 50s, duration: 10 seconds
+Person detected at 1m 20s, duration: 10 seconds
+Active person detected at 1m 20s, duration: 10 seconds
+Person detected at 1m 30s, duration: 10 seconds
+Active person detected at 1m 30s, duration: 10 seconds
+Person detected at 1m 40s, duration: 10 seconds
+Active person detected at 1m 40s, duration: 10 seconds
+Person detected at 1m 50s, duration: 10 seconds
+Active person detected at 1m 50s, duration: 10 seconds
+Person detected at 2m 0s, duration: 10 seconds
+Active person detected at 2m 0s, duration: 10 seconds
+Person detected at 2m 10s, duration: 10 seconds
+Active person detected at 2m 10s, duration: 10 seconds
+Person detected at 2m 30s, duration: 10 seconds
+Active person detected at 2m 30s, duration: 10 seconds
+Person detected at 2m 40s, duration: 10 seconds
+Active person detected at 2m 40s, duration: 10 seconds
+Person detected at 2m 50s, duration: 10 seconds
+Active person detected at 2m 50s, duration: 10 seconds
+Person detected at 3m 0s, duration: 10 seconds
+Active person detected at 3m 0s, duration: 10 seconds
+Person detected at 3m 10s, duration: 10 seconds
+Person detected at 3m 20s, duration: 10 seconds
+Active person detected at 3m 20s, duration: 10 seconds
+Person detected at 3m 30s, duration: 10 seconds
+Person detected at 3m 40s, duration: 10 seconds
+Active person detected at 3m 40s, duration: 10 seconds
+Person detected at 3m 50s, duration: 10 seconds
+Active person detected at 3m 50s, duration: 10 seconds
+Person detected at 4m 0s, duration: 10 seconds
+Active person detected at 4m 0s, duration: 10 seconds
+Person detected at 4m 10s, duration: 10 seconds
+Active person detected at 4m 10s, duration: 10 seconds
+Person detected at 4m 20s, duration: 10 seconds
+Active person detected at 4m 20s, duration: 10 seconds
+Person detected at 4m 30s, duration: 10 seconds
+Active person detected at 4m 30s, duration: 10 seconds
+Person detected at 4m 40s, duration: 10 seconds
+Active person detected at 4m 40s, duration: 10 seconds
+Person detected at 4m 50s, duration: 10 seconds
+Active person detected at 4m 50s, duration: 10 seconds
+Person detected at 5m 0s, duration: 10 seconds
+Active person detected at 5m 0s, duration: 10 seconds
+Person detected at 5m 20s, duration: 10 seconds
+Active person detected at 5m 20s, duration: 10 seconds
+Person detected at 5m 30s, duration: 10 seconds
+Active person detected at 5m 30s, duration: 10 seconds
+Person detected at 5m 50s, duration: 10 seconds
+Active person detected at 5m 50s, duration: 10 seconds
+Person detected at 6m 0s, duration: 10 seconds
+Active person detected at 6m 0s, duration: 10 seconds
+Person detected at 6m 10s, duration: 10 seconds
+Active person detected at 6m 10s, duration: 10 seconds
+Person detected at 6m 20s, duration: 10 seconds
+Active person detected at 6m 20s, duration: 10 seconds
+Person detected at 6m 30s, duration: 10 seconds
+Active person detected at 6m 30s, duration: 10 seconds
+Person detected at 6m 40s, duration: 10 seconds
+Active person detected at 6m 40s, duration: 10 seconds
+Person detected at 6m 50s, duration: 10 seconds
+Active person detected at 6m 50s, duration: 10 seconds
+Person detected at 7m 0s, duration: 10 seconds
+Active person detected at 7m 0s, duration: 10 seconds
+Person detected at 7m 10s, duration: 10 seconds
+Person detected at 7m 20s, duration: 10 seconds
+Active person detected at 7m 20s, duration: 10 seconds
+Person detected at 7m 30s, duration: 10 seconds
+Active person detected at 7m 30s, duration: 10 seconds
+Person detected at 7m 40s, duration: 10 seconds
+Active person detected at 7m 40s, duration: 10 seconds
+Person detected at 7m 50s, duration: 10 seconds
+Active person detected at 7m 50s, duration: 10 seconds
+Person detected at 8m 0s, duration: 10 seconds
+Person detected at 8m 10s, duration: 10 seconds
+Active person detected at 8m 10s, duration: 10 seconds
+Person detected at 8m 20s, duration: 10 seconds
+Active person detected at 8m 20s, duration: 10 seconds
+Person detected at 8m 30s, duration: 10 seconds
+Active person detected at 8m 30s, duration: 10 seconds
+Person detected at 27m 30s, duration: 10 seconds
+Active person detected at 27m 30s, duration: 10 seconds
+Person detected at 27m 50s, duration: 10 seconds
+Active person detected at 27m 50s, duration: 10 seconds
+Person detected at 28m 0s, duration: 10 seconds
+Active person detected at 28m 0s, duration: 10 seconds
+Person detected at 28m 30s, duration: 10 seconds
+Active person detected at 28m 30s, duration: 10 seconds
+Person detected at 29m 0s, duration: 10 seconds
+Active person detected at 29m 0s, duration: 10 seconds
+Person detected at 29m 20s, duration: 10 seconds
+Active person detected at 29m 20s, duration: 10 seconds
+Person detected at 29m 30s, duration: 10 seconds
+Person detected at 29m 40s, duration: 10 seconds
+Person detected at 29m 50s, duration: 10 seconds
+Person detected at 30m 0s, duration: 10 seconds
+Person detected at 30m 10s, duration: 10 seconds
+Person detected at 30m 20s, duration: 10 seconds
+Active person detected at 30m 20s, duration: 10 seconds
+Person detected at 30m 30s, duration: 10 seconds
+Person detected at 30m 40s, duration: 10 seconds
+Person detected at 30m 50s, duration: 10 seconds
+Person detected at 31m 0s, duration: 10 seconds
+Active person detected at 31m 0s, duration: 10 seconds
+Person detected at 31m 10s, duration: 10 seconds
+Active person detected at 31m 10s, duration: 10 seconds
+Person detected at 31m 20s, duration: 10 seconds
+Active person detected at 31m 20s, duration: 10 seconds
+Person detected at 31m 30s, duration: 10 seconds
+Active person detected at 31m 30s, duration: 10 seconds
+Person detected at 31m 40s, duration: 10 seconds
+Active person detected at 31m 40s, duration: 10 seconds
+Person detected at 31m 50s, duration: 10 seconds
+Active person detected at 31m 50s, duration: 10 seconds
+Person detected at 32m 0s, duration: 10 seconds
+Active person detected at 32m 0s, duration: 10 seconds
+Person detected at 32m 10s, duration: 10 seconds
+Active person detected at 32m 10s, duration: 10 seconds
+Person detected at 32m 20s, duration: 10 seconds
+Active person detected at 32m 20s, duration: 10 seconds
+Person detected at 32m 30s, duration: 10 seconds
+Active person detected at 32m 30s, duration: 10 seconds
+Person detected at 32m 40s, duration: 10 seconds
+Active person detected at 32m 40s, duration: 10 seconds
+Person detected at 32m 50s, duration: 10 seconds
+Active person detected at 32m 50s, duration: 10 seconds
+Person detected at 33m 0s, duration: 10 seconds
+Active person detected at 33m 0s, duration: 10 seconds
+Person detected at 33m 10s, duration: 10 seconds
+Active person detected at 33m 10s, duration: 10 seconds
+Person detected at 33m 20s, duration: 10 seconds
+Active person detected at 33m 20s, duration: 10 seconds
+Person detected at 33m 30s, duration: 10 seconds
+Active person detected at 33m 30s, duration: 10 seconds
+Person detected at 33m 40s, duration: 10 seconds
+Active person detected at 33m 40s, duration: 10 seconds
+Person detected at 33m 50s, duration: 10 seconds
+Active person detected at 33m 50s, duration: 10 seconds
+Person detected at 34m 0s, duration: 10 seconds
+Active person detected at 34m 0s, duration: 10 seconds
+Person detected at 34m 10s, duration: 10 seconds
+Active person detected at 34m 10s, duration: 10 seconds
+Person detected at 34m 20s, duration: 10 seconds
+Active person detected at 34m 20s, duration: 10 seconds
+Person detected at 34m 30s, duration: 10 seconds
+Active person detected at 34m 30s, duration: 10 seconds
+Person detected at 34m 40s, duration: 10 seconds
+Active person detected at 34m 40s, duration: 10 seconds
+Person detected at 34m 50s, duration: 10 seconds
+Active person detected at 34m 50s, duration: 10 seconds
+Person detected at 35m 0s, duration: 10 seconds
+Active person detected at 35m 0s, duration: 10 seconds
+Person detected at 35m 10s, duration: 10 seconds
+Active person detected at 35m 10s, duration: 10 seconds
+Person detected at 35m 20s, duration: 10 seconds
+Active person detected at 35m 20s, duration: 10 seconds
+Person detected at 35m 30s, duration: 10 seconds
+Active person detected at 35m 30s, duration: 10 seconds
+Person detected at 35m 40s, duration: 10 seconds
+Active person detected at 35m 40s, duration: 10 seconds
+Person detected at 35m 50s, duration: 10 seconds
+Active person detected at 35m 50s, duration: 10 seconds
+Person detected at 40m 40s, duration: 10 seconds
+Active person detected at 40m 40s, duration: 10 seconds
+Person detected at 40m 50s, duration: 10 seconds
+Active person detected at 40m 50s, duration: 10 seconds
+Person detected at 41m 0s, duration: 10 seconds
+Active person detected at 41m 0s, duration: 10 seconds
+Person detected at 41m 20s, duration: 10 seconds
+Active person detected at 41m 20s, duration: 10 seconds
+Person detected at 41m 30s, duration: 10 seconds
+Active person detected at 41m 30s, duration: 10 seconds
+Person detected at 41m 40s, duration: 10 seconds
+Active person detected at 41m 40s, duration: 10 seconds
+Person detected at 41m 50s, duration: 10 seconds
+Active person detected at 41m 50s, duration: 10 seconds
+Person detected at 42m 0s, duration: 10 seconds
+Active person detected at 42m 0s, duration: 10 seconds
+Person detected at 42m 10s, duration: 10 seconds
+Active person detected at 42m 10s, duration: 10 seconds
+Person detected at 42m 30s, duration: 10 seconds
+Active person detected at 42m 30s, duration: 10 seconds
+Person detected at 43m 0s, duration: 10 seconds
+Active person detected at 43m 0s, duration: 10 seconds
+Person detected at 43m 20s, duration: 10 seconds
+Active person detected at 43m 20s, duration: 10 seconds
+Person detected at 43m 40s, duration: 10 seconds
+Active person detected at 43m 40s, duration: 10 seconds
+Person detected at 45m 10s, duration: 10 seconds
+Active person detected at 45m 10s, duration: 10 seconds
+Person detected at 45m 20s, duration: 10 seconds
+Active person detected at 45m 20s, duration: 10 seconds
+Person detected at 45m 30s, duration: 10 seconds
+Active person detected at 45m 30s, duration: 10 seconds
+Person detected at 45m 40s, duration: 10 seconds
+Active person detected at 45m 40s, duration: 10 seconds
+Person detected at 45m 50s, duration: 10 seconds
+Active person detected at 45m 50s, duration: 10 seconds
+Person detected at 46m 0s, duration: 10 seconds
+Active person detected at 46m 0s, duration: 10 seconds
+Person detected at 46m 10s, duration: 10 seconds
+Active person detected at 46m 10s, duration: 10 seconds
+Person detected at 46m 20s, duration: 10 seconds
+Active person detected at 46m 20s, duration: 10 seconds
+Person detected at 46m 30s, duration: 10 seconds
+Active person detected at 46m 30s, duration: 10 seconds
+Person detected at 46m 40s, duration: 10 seconds
+Active person detected at 46m 40s, duration: 10 seconds
+Person detected at 46m 50s, duration: 10 seconds
+Active person detected at 46m 50s, duration: 10 seconds
+Person detected at 47m 0s, duration: 10 seconds
+Active person detected at 47m 0s, duration: 10 seconds
+Person detected at 47m 10s, duration: 10 seconds
+Active person detected at 47m 10s, duration: 10 seconds
+Person detected at 47m 20s, duration: 10 seconds
+Active person detected at 47m 20s, duration: 10 seconds
+Person detected at 47m 30s, duration: 10 seconds
+Active person detected at 47m 30s, duration: 10 seconds
+Person detected at 47m 50s, duration: 10 seconds
+Active person detected at 47m 50s, duration: 10 seconds
+
+Total detected time: 1220 seconds (20m 20s), (39.44% of video duration).
+Total active time: 1090 seconds (18m 10s), (35.24% of video duration).
+Person detected from 0m 30s to 1m 10s
+Person detected from 1m 20s to 2m 20s
+Person detected from 2m 30s to 5m 10s
+Person detected from 5m 20s to 5m 40s
+Person detected from 5m 50s to 8m 40s
+Person detected from 27m 30s to 27m 40s
+Person detected from 27m 50s to 28m 10s
+Person detected from 28m 30s to 28m 40s
+Person detected from 29m 0s to 29m 10s
+Person detected from 29m 20s to 36m 0s
+Person detected from 40m 40s to 41m 10s
+Person detected from 41m 20s to 42m 20s
+Person detected from 42m 30s to 42m 40s
+Person detected from 43m 0s to 43m 10s
+Person detected from 43m 20s to 43m 30s
+Person detected from 43m 40s to 43m 50s
+Person detected from 45m 10s to 47m 40s
+Person detected from 47m 50s to 48m 0s
