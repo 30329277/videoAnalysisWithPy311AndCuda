@@ -117,6 +117,7 @@ def detect_objects_in_video(video_path, model, transform, num_threads=4, thresho
 
 def write_results_to_file(detected_frames, fps, output_file='output.txt'):
     object_durations = defaultdict(float)
+    frame_objects = defaultdict(set)  # 用于存储每帧的对象集合
     total_video_duration = max(frame_num for frame_num, _ in detected_frames) / fps
 
     with open(output_file, 'w') as f:
@@ -126,10 +127,12 @@ def write_results_to_file(detected_frames, fps, output_file='output.txt'):
             end_time = (frame_num + 1) / fps
             duration = end_time - start_time
             bbox_str = ', '.join(f"{coord:.2f}" for coord in bbox)
-            f.write(f"ID: {label_id}, Name: {label_name}, BBox: [{bbox_str}], Start: {start_time:.2f}s, Duration: {duration:.2f}s, Score: {score:.2f}\n")
-            
-            # 累加每种对象的总时长
-            object_durations[label_name] += duration
+
+            # 如果这个对象在这个帧里还没有被记录过，则记录它
+            if label_name not in frame_objects[frame_num]:
+                f.write(f"ID: {label_id}, Name: {label_name}, BBox: [{bbox_str}], Start: {start_time:.2f}s, Duration: {duration:.2f}s, Score: {score:.2f}\n")
+                object_durations[label_name] += duration
+                frame_objects[frame_num].add(label_name)  # 标记此帧已记录该对象
 
         # 写入汇总信息
         f.write("\nSummary of object durations:\n")
