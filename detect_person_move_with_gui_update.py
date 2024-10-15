@@ -59,7 +59,7 @@ def process_frame(frame, model, transform, target_label_id, threshold=0.8):
     
     return people_boxes
 
-def frame_generator(video_path, target_width=640, target_height=480, interval=30):
+def frame_generator(video_path, target_width=640, target_height=480, interval=10):
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
     frames_per_interval = int(fps * interval)
