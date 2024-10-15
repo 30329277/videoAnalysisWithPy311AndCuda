@@ -6,6 +6,7 @@ ffmpeg-master-latest-win64-gpl/
 
 # 忽略data
 data/
+split_video/
 
 # 忽略 Python 缓存和编译文件
 __pycache__/
