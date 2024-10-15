@@ -365,16 +365,43 @@ directory_label = ttk.Label(frame_directory, textvariable=directory_path, width=
 directory_label.pack(side="left", padx=(10, 0))  # Add padding
 
 
-# --- Part 2: Video list ---
+# Function to select or deselect all videos
+def select_deselect_all(select):
+    for var, _, _ in video_checkboxes:
+        var.set(select)
+
+# Function to analyze all selected videos
+def analyze_all_videos():
+    selected_videos_data = [
+        (os.path.join(directory_path.get(), file), result_label)
+        for var, file, result_label in video_checkboxes
+        if var.get() and os.path.isfile(os.path.join(directory_path.get(), file))
+    ]
+    if not selected_videos_data:
+        mass_result.set("没有选择任何视频。")
+        return
+    # Reuse the logic from mass_analysis function here
+    mass_analysis()
+
+# - Part 2: Video list -
 frame_videos = ttk.Frame(root)
 frame_videos.grid(row=1, column=0, columnspan=2, padx=10, pady=(0, 10), sticky="nsew")
 
+# Add buttons for Select All and Deselect All
+select_all_button = ttk.Button(frame_videos, text="全选", command=lambda: select_deselect_all(True))
+select_all_button.pack(side="top", anchor="nw", pady=(0, 5))
+
+deselect_all_button = ttk.Button(frame_videos, text="取消全选", command=lambda: select_deselect_all(False))
+deselect_all_button.pack(side="top", anchor="nw")
+
+# Add a button for Analyze All
+# analyze_all_button = ttk.Button(frame_videos, text="全部分析", command=analyze_all_videos)
+# analyze_all_button.pack(side="top", anchor="ne", pady=(0, 5))
+
 video_frame = tk.Canvas(frame_videos) # Use a Canvas for scrolling
 video_frame.pack(side="left", fill="both", expand=True)
-
 scrollbar = ttk.Scrollbar(frame_videos, orient="vertical", command=video_frame.yview)
 scrollbar.pack(side="right", fill="y")
-
 video_frame.configure(yscrollcommand=scrollbar.set)
 video_frame.bind('<Configure>', lambda e: video_frame.configure(scrollregion=video_frame.bbox("all")))
 
